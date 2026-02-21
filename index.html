@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>المشخّص الصامت</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شاشة البداية -->
+    <div id="start-screen" class="screen active">
+        <h1>المشخّص الصامت</h1>
+        <p>سيتم عرض حالة غامضة. استخدم الأدوات لجمع المعلومات، ثم قم بالتشخيص. خطأ واحد يعني الخسارة الكاملة.</p>
+        <button id="start-button">ابدأ اللعبة</button>
+    </div>
+
+    <!-- شاشة اللعب الرئيسية -->
+    <div id="game-screen" class="screen">
+        <div id="score-container">النقاط: <span id="score">0</span></div>
+        <div id="case-description"></div>
+        
+        <div id="image-container">
+            <img id="case-image" src="" alt="صورة الحالة السريرية">
+            <!-- النقاط الساخنة ستتم إضافتها هنا عبر JavaScript -->
+        </div>
+
+        <div id="info-popup"></div> <!-- نافذة منبثقة لعرض المعلومات -->
+
+        <div id="toolkit">
+            <div class="tool" data-tool="hand">🖐️</div>
+            <div class="tool" data-tool="stethoscope">🩺</div>
+            <div class="tool" data-tool="magnifier">🔍</div>
+            <div class="tool" data-tool="hammer">🔨</div>
+            <div class="tool" data-tool="pen">🖊️</div>
+            <button id="diagnose-button">✅ تشخيص</button>
+        </div>
+    </div>
+
+    <!-- شاشة التشخيص (الخيارات) -->
+    <div id="diagnosis-screen" class="screen">
+        <h2>ما هو تشخيصك النهائي؟</h2>
+        <div id="choices-container">
+            <!-- الخيارات ستتم إضافتها هنا عبر JavaScript -->
+        </div>
+    </div>
+
+    <!-- شاشة الخسارة -->
+    <div id="game-over-screen" class="screen">
+        <h1>لقد خسرت!</h1>
+        <p id="game-over-reason"></p>
+        <button id="restart-button">إعادة اللعب</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
