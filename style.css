@@ -1,0 +1,85 @@
+/* (هذا الكود جاهز للنسخ واللصق مباشرة) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.screen { display: none; }
+.screen.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+#image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+#case-image { width: 100%; border-radius: 10px; }
+.hotspot {
+    position: absolute;
+    background: rgba(255, 255, 0, 0.0); /* شفاف في البداية */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.hotspot:hover { background: rgba(255, 255, 0, 0.4); } /* يظهر عند المرور فوقه */
+#toolkit {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+.tool {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+.tool:hover, .tool.selected { background: #cce5ff; }
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+#game-over-screen { background-color: #ffdddd; }
+#game-over-screen h1 { color: #d93025; }
+.choice-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+#info-popup {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* يظهر عند كشف معلومة */
+}
+
